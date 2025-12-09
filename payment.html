@@ -1,16 +1,118 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Payment</title>
-<link rel='stylesheet' href='styles.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheWallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: 'Arial', sans-serif;
+            background-color: #333;
+            display: flex; justify-content: center; align-items: center; height: 100vh;
+        }
+
+        .phone-screen {
+            width: 440px; height: 956px;
+            background-color: #fff;
+            border-radius: 55px; overflow: hidden; position: relative;
+            border: 8px solid #1a1a1a;
+            display: flex; flex-direction: column;
+        }
+
+        /* HEADER */
+        .header { padding: 30px 20px; display: flex; align-items: center; }
+        .back-btn { font-size: 24px; color: #333; margin-right: 20px; text-decoration: none; }
+        .page-title { font-size: 20px; font-weight: bold; }
+
+        /* BALANCE CARD */
+        .balance-container {
+            background: linear-gradient(135deg, #af094b, #d81b60);
+            margin: 20px; padding: 30px; border-radius: 25px; color: white;
+            box-shadow: 0 10px 20px rgba(175,9,75,0.3);
+        }
+        .balance-label { font-size: 14px; opacity: 0.9; }
+        .balance-amount { font-size: 36px; font-weight: bold; margin-top: 10px; }
+
+        /* TOP UP GRID */
+        .section-title { padding: 0 25px; font-weight: bold; margin-bottom: 15px; color: #333; }
+        
+        .amount-grid {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;
+            padding: 0 20px; margin-bottom: 20px;
+        }
+
+        .amount-box {
+            border: 2px solid #af094b; color: #af094b;
+            border-radius: 15px; padding: 20px 0;
+            text-align: center; font-weight: bold; font-size: 16px;
+            cursor: pointer; transition: 0.2s;
+        }
+        .amount-box:hover, .amount-box.selected {
+            background-color: #af094b; color: white;
+        }
+
+        /* PAYMENT METHODS */
+        .method-list { padding: 0 20px; }
+        .method-item {
+            display: flex; align-items: center; padding: 15px;
+            border-bottom: 1px solid #eee; font-size: 16px;
+        }
+        .method-icon { width: 30px; margin-right: 15px; text-align: center; }
+
+        /* BUTTON */
+        .bottom-action { margin-top: auto; padding: 30px; }
+        .pay-btn {
+            background-color: #af094b; color: white;
+            width: 100%; padding: 20px; border-radius: 35px;
+            text-align: center; font-weight: bold; font-size: 18px;
+            text-decoration: none; display: block;
+        }
+    </style>
 </head>
 <body>
-<div class='screen'>
-    <div class='section-title'>Payment</div>
 
-    <div class='card'>Your Fare: RM 40</div>
-    <a class='btn' href='rating.html'>Proceed to Rating</a>
-</div>
+    <div class="phone-screen">
+        <div class="header">
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <div class="page-title">SheWallet</div>
+        </div>
+
+        <div class="balance-container">
+            <div class="balance-label">Current Balance</div>
+            <div class="balance-amount">RM 52.90</div>
+        </div>
+
+        <div class="section-title">Select Amount:</div>
+        <div class="amount-grid">
+            <div class="amount-box">RM10</div>
+            <div class="amount-box">RM20</div>
+            <div class="amount-box selected">RM30</div>
+            <div class="amount-box">RM40</div>
+            <div class="amount-box">RM50</div>
+            <div class="amount-box">RM100</div>
+        </div>
+
+        <div class="section-title">Payment Method:</div>
+        <div class="method-list">
+            <div class="method-item">
+                <div class="method-icon"><i class="fab fa-apple"></i></div>
+                Apple Pay
+            </div>
+            <div class="method-item">
+                <div class="method-icon"><i class="fas fa-credit-card"></i></div>
+                Debit / Credit Card
+            </div>
+            <div class="method-item">
+                <div class="method-icon"><i class="fas fa-university"></i></div>
+                FPX Online Banking
+            </div>
+        </div>
+
+        <div class="bottom-action">
+            <a href="#" class="pay-btn">Proceed to Topup</a>
+        </div>
+    </div>
+
 </body>
 </html>
