@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SheGO - Welcome</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheGO</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<div class="screen">
+    <div class="screen">
+        <img src="logo-shego.png" class="logo-img" alt="SheGO Logo">
+        
+        <div class="subtitle">Rides by Women, For Women</div>
 
-  <div class="logo">SheGO</div>
-  <div class="subtitle">Rides by Women, For Women</div>
+        <p class="promo-text">New to SheGO? Enjoy 50% off on your first trip!</p>
 
-  <a class="btn google" href="login.html">Login with Google</a>
-  <a class="btn apple" href="login.html">Login with Apple</a>
-  <a class="btn facebook" href="login.html">Login with Facebook</a>
+        <div class="input-group">
+             <span class="country-code">+60</span>
+             <input type="tel" placeholder="Enter Your Number">
+        </div>
 
-  <input class="input" placeholder="Phone Number">
+        <div class="divider">OR</div>
 
-  <p class="small">Don't have an account?
-    <a class="link" href="signup.html">SIGN UP</a>
-  </p>
+        <a href="login.html" class="btn btn-apple">
+            <i class="fab fa-apple"></i> Login with Apple
+        </a>
+        
+        <a href="login.html" class="btn btn-google">
+            <i class="fab fa-google"></i> Login with Google
+        </a>
+        
+        <a href="login.html" class="btn btn-facebook">
+            <i class="fab fa-facebook-f"></i> Login with Facebook
+        </a>
 
-</div>
+        <div class="footer-link">
+            Don't have an account? <a href="signup.html">SIGN UP</a>
+        </div>
+    </div>
 
 </body>
 </html>
